@@ -1,0 +1,18 @@
+import axios from '../index'
+{{each paths api apiName}}	{{each api apiInfo method}}
+/**
+ * @tags: {{each apiInfo.tags tag len }} {{tag }}  {{/each}}
+ * @name: {{ apiInfo.summary }} {{each apiInfo.parameters parameter i}}
+ * @param { {{parameter.type || parameter.description}} } {{parameter.name}} {{parameter.required ? 'required' : ''}} {{if parameter.schema && parameter.schema.originalRef}} {{each definitions[parameter.schema.originalRef].properties attr attrName }} 
+	{ {{attr.type}} }	{{ attrName }} {{attr.description}} {{if definitions[parameter.schema.originalRef].required}} {{ definitions[parameter.schema.originalRef].required.indexOf(attrName) !== -1 ? true : false }} {{/if}}  {{/each}}   {{/if}} {{/each}} 
+*/
+export const {{ apiName.slice(1).split('/').map((s,index) => { if( apiName.slice(1).split('/').length > 2 && (index < 2 || s[0] === "{")){ return ''} return s[0].toUpperCase()+s.slice(1)} ).join('') }} = ({{ apiName.split('/').slice(-1)[0][0] === "{" ? 'id':'data' }} = null) => {
+	return axios.request({
+		method: '{{method}}',	{{if apiName.slice(-1) !== '}'}}
+		url: '{{apiName}}',{{else}}	
+		url: `{{apiName.split('/').slice(0,-1).join('/') + '/${id}'}}`,	 {{/if}} {{if apiName.split('/').slice(-1)[0][0] !== "{"}}
+		{{ method.toUpperCase() == 'POST' ? 'data' : 'params'}}: data {{/if}}
+	})
+}
+    {{/each}}
+{{/each}}

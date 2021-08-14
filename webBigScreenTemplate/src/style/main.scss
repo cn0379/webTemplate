@@ -1,0 +1,54 @@
+
+/* 颜色变量 */
+$color-font-yellow: #fee74b;
+$color-font-white: #fff;
+$color-font-white2: #aaedff; //浅绿的白 参考累计办件量和申请人办件状态
+$color-font-blue1: #99daee;
+$color-font-grey:#bdbcba;   // 较浅得灰色
+$color-font-grey2:#676664; // 较深得灰色
+$color-font-green:#3ff940;
+$color-font-yellow2: #fde74d; // 办件量的字体颜色
+$inset-box-shadow: 0 0 20px #0a6fac inset;
+
+// 整体宽高
+$topHeight: 128px; // 顶部标题的高度
+$allHeight: 1644px; // 页面整体高度
+$allWidth: 3744px;  // 页面整体宽度
+$leftWidth: 674px;  // 左侧内容栏宽度
+$rightWidth: 672px; // 右侧内容栏宽度
+$centerWidth: $allWidth - $leftWidth - $rightWidth; // 中部内容栏宽度
+$contentHeight: $allHeight - $topHeight; // 内容栏、地图高度
+
+// 整体z-index
+$mapIndex: 1;
+$contentIndex: 11;
+$popIndex: 99;
+$previewImgIndex: 9999;
+
+// grid 布局相关
+// 行间距
+$row-gap: 20px;
+// 列间距
+$column-gap: 28px;
+
+
+
+
+.loading{
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 999;
+  }
+
+// $borderWidth 上 右 下 左
+@mixin triangle($borderWidth, $backgroundColor) {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: $borderWidth;
+    border-color: transparent transparent $backgroundColor transparent;
+}

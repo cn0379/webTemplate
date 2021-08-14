@@ -1,0 +1,142 @@
+{
+    "fields": [{
+      "__config__": {
+        "label": "多行文本",
+        "labelWidth": null,
+        "showLabel": true,
+        "tag": "el-input",
+        "tagIcon": "textarea",
+        "required": true,
+        "layout": "colFormItem",
+        "span": 24,
+        "regList": [],
+        "changeTag": true,
+        "document": "https://element.eleme.cn/#/zh-CN/component/input",
+        "formId": 101,
+        "renderKey": 1618453102984
+      },
+      "type": "textarea",
+      "placeholder": "请输入多行文本",
+      "autosize": {
+        "minRows": 4,
+        "maxRows": 4
+      },
+      "style": {
+        "width": "100%"
+      },
+      "maxlength": null,
+      "show-word-limit": false,
+      "readonly": false,
+      "disabled": false,
+      "__vModel__": "field101"
+    }, {
+      "__config__": {
+        "label": "下拉选择",
+        "showLabel": true,
+        "labelWidth": null,
+        "tag": "el-select",
+        "tagIcon": "select",
+        "layout": "colFormItem",
+        "span": 24,
+        "required": true,
+        "regList": [],
+        "changeTag": true,
+        "document": "https://element.eleme.cn/#/zh-CN/component/select",
+        "formId": 102,
+        "renderKey": 1618453104641
+      },
+      "__slot__": {
+        "options": [{
+          "label": "选项一",
+          "value": 1
+        }, {
+          "label": "选项二",
+          "value": 2
+        }]
+      },
+      "placeholder": "请选择下拉选择",
+      "style": {
+        "width": "100%"
+      },
+      "clearable": true,
+      "disabled": false,
+      "filterable": false,
+      "multiple": false,
+      "__vModel__": "field102"
+    }, {
+      "__config__": {
+        "label": "单选框组",
+        "labelWidth": null,
+        "showLabel": true,
+        "tag": "el-radio-group",
+        "tagIcon": "radio",
+        "changeTag": true,
+        "layout": "colFormItem",
+        "span": 24,
+        "optionType": "default",
+        "regList": [],
+        "required": true,
+        "border": false,
+        "document": "https://element.eleme.cn/#/zh-CN/component/radio",
+        "formId": 103,
+        "renderKey": 1618453106776
+      },
+      "__slot__": {
+        "options": [{
+          "label": "选项一",
+          "value": 1
+        }, {
+          "label": "选项二",
+          "value": 2
+        }]
+      },
+      "style": {},
+      "size": "medium",
+      "disabled": false,
+      "__vModel__": "field103"
+    }, {
+      "__config__": {
+        "label": "单行文本",
+        "labelWidth": null,
+        "showLabel": true,
+        "changeTag": true,
+        "tag": "el-input",
+        "tagIcon": "input",
+        "required": true,
+        "layout": "colFormItem",
+        "span": 24,
+        "document": "https://element.eleme.cn/#/zh-CN/component/input",
+        "regList": [{
+          "pattern": "/^1(3|4|5|7|8|9)\\d{9}$/",
+          "message": "手机号格式错误"
+        }]
+      },
+      "__slot__": {
+        "prepend": "",
+        "append": ""
+      },
+      "__vModel__": "mobile",
+      "placeholder": "请输入手机号",
+      "style": {
+        "width": "100%"
+      },
+      "clearable": true,
+      "prefix-icon": "el-icon-mobile",
+      "suffix-icon": "",
+      "maxlength": 11,
+      "show-word-limit": true,
+      "readonly": false,
+      "disabled": false
+    }],
+    "formRef": "elForm",
+    "formModel": "formData",
+    "size": "medium",
+    "labelPosition": "right",
+    "labelWidth": 100,
+    "formRules": "rules",
+    "gutter": 15,
+    "disabled": false,
+    "span": 24,
+    "formBtns": false
+  }
+  

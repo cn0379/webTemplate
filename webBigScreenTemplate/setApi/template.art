@@ -1,0 +1,18 @@
+import axios from './index'
+
+{{each paths as api apiName}}
+    {{each api as apiInfo method}}
+/**
+ * @tags: {{each apiInfo.tags tag len }} {{tag }}  {{/each}}
+ * @name: {{ apiInfo.summary }} {{each apiInfo.parameters parameter i}}
+ * @param { {{parameter.type}} } {{parameter.name}} {{parameter.required ? 'required' : ''}}{{/each}}
+ */
+export const {{ apiName.slice(1).split('/').map(s => s[0].toUpperCase()+s.slice(1)).join('') }} = (data = null) => {
+	return axios.request({
+		method: '{{method}}',
+		url: '{{apiName}}',
+		data: data
+	})
+}
+    {{/each}}
+{{/each}}
