@@ -1,0 +1,100 @@
+@import './variables.scss';
+
+@mixin colorBtn($color) {
+  background: $color;
+
+  &:hover {
+    color: $color;
+
+    &::before,
+    &::after {
+      background: $color;
+    }
+  }
+}
+
+.blue-btn {
+  @include colorBtn($blue);
+}
+
+.light-blue-btn {
+  @include colorBtn($light-blue);
+}
+
+.red-btn {
+  @include colorBtn($red);
+}
+
+.pink-btn {
+  @include colorBtn($pink);
+}
+
+.green-btn {
+  @include colorBtn($green);
+}
+
+.tiffany-btn {
+  @include colorBtn($tiffany);
+}
+
+.yellow-btn {
+  @include colorBtn($yellow);
+}
+
+.pan-btn {
+  position: relative;
+  display: inline-block;
+  padding: 14px 36px;
+  color: #fff;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  transition: 600ms ease all;
+
+  &:hover {
+    background: #fff;
+
+    &::before,
+    &::after {
+      width: 100%;
+      transition: 600ms ease all;
+    }
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 2px;
+    transition: 400ms ease all;
+    content: '';
+  }
+
+  &::after {
+    top: inherit;
+    right: inherit;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.custom-button {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 10px 15px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1;
+  white-space: nowrap;
+  text-align: center;
+  background: #fff;
+  border-radius: 4px;
+  outline: 0;
+  cursor: pointer;
+  -webkit-appearance: none;
+  display: inline-block;
+
+}

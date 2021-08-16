@@ -1,0 +1,303 @@
+// cover some element-ui styles
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+  color: #7da3ff;
+  background: #7da3ff;
+  border-radius: 5px;
+}
+
+.el-table tbody tr:hover > td {
+  background-color: #e3f2fd !important;
+}
+
+.el-breadcrumb__inner,
+.el-breadcrumb__inner a {
+  color: #666a80;
+  font-weight: 400 !important;
+  font-size: 14px;
+}
+
+.el-upload {
+  input[type='file'] {
+    display: none !important;
+  }
+}
+
+.el-upload__input {
+  display: none;
+}
+
+// to fixed https://github.com/ElemeFE/element/issues/2461
+.el-dialog {
+  position: relative;
+  left: 0;
+  margin: 0 auto;
+  transform: none;
+}
+
+// refine element ui upload
+.upload-container {
+  .el-upload {
+    width: 100%;
+
+    .el-upload-dragger {
+      width: 100%;
+      height: 200px;
+    }
+  }
+}
+
+// dropdown
+.el-dropdown-menu {
+  a {
+    display: block;
+  }
+}
+
+.el-button--text {
+  padding: 0;
+}
+// to fix el-date-picker css style
+.el-range-separator {
+  box-sizing: content-box;
+}
+
+/*  斑马纹表格背景 */
+.el-table--striped .el-table__body tr.el-table__row--striped td {
+  background: #f5f7f9;
+}
+///* 表格行选中颜色*/
+.el-table__body tr.current-row > td {
+  background-color: #e4ecfc;
+}
+
+.el-form-item__error {
+  padding-top: 0;
+}
+
+.el-dialog__header {
+  height: 45px;
+  padding: 13px;
+  background-color: #e6e9ed;
+}
+
+.el-dialog__title {
+  color: #333;
+  font-weight: normal;
+  font-size: 14px;
+  font-stretch: normal;
+  letter-spacing: 0;
+}
+
+.el-dialog__headerbtn {
+  margin-top: -6px;
+}
+
+.el-dialog__footer {
+  height: 60px;
+  padding: 14px 20px;
+  background-color: #f5f7f9;
+}
+
+.el-dialog__footer .button-confirm {
+  width: 80px;
+  height: 32px;
+  color: #fff;
+  font-weight: normal;
+  font-size: 14px;
+  font-stretch: normal;
+  letter-spacing: 0;
+  background-color: #4c7ff0;
+  border: 0;
+  border-radius: 2px;
+}
+
+.el-dialog__footer .button-cancel {
+  width: 80px;
+  height: 32px;
+  margin-left: 10px;
+  color: #929090;
+  font-weight: normal;
+  font-size: 14px;
+  font-stretch: normal;
+  letter-spacing: 0;
+  background-color: #e1e1e1;
+  border: 0;
+  border-radius: 2px;
+}
+
+.col-label {
+  width: 150px;
+  height: 38px;
+  padding-right: 15px;
+  color: #333;
+  font-size: 14px;
+  line-height: 38px;
+  text-align: right;
+  background-color: #f5f7f9;
+}
+
+.col-text {
+  width: calc(25% - 159px);
+  padding-left: 16px;
+  overflow: hidden;
+  color: #666;
+  font-size: 14px;
+  white-space: nowrap;
+  text-align: left;
+  text-overflow: ellipsis;
+}
+
+.col-text-2 {
+  width: calc(50% - 161px);
+  padding-left: 16px;
+  overflow: hidden;
+  color: #666;
+  font-size: 14px;
+  white-space: nowrap;
+  text-align: left;
+  text-overflow: ellipsis;
+}
+
+.col-text-3 {
+  width: calc(75% - 163px);
+  padding-left: 16px;
+  overflow: hidden;
+  color: #666;
+  font-size: 14px;
+  white-space: nowrap;
+  text-align: left;
+  text-overflow: ellipsis;
+}
+
+.col-text-4 {
+  width: calc(100% - 165px);
+  padding-left: 16px;
+  overflow: hidden;
+  color: #666;
+  font-size: 14px;
+  white-space: nowrap;
+  text-align: left;
+  text-overflow: ellipsis;
+}
+
+.el-table {
+  color: #3d404d;
+}
+
+.el-table thead {
+  color: #333;
+  font-weight: 500;
+  background-color: rgb(239, 245, 255);
+}
+
+.el-table th {
+  background-color: rgb(239, 245, 255);
+}
+
+.el-input.is-disabled .el-input__inner {
+  color: #606266;
+}
+
+.el-textarea.is-disabled .el-textarea__inner {
+  color: #606266;
+}
+
+.el-textarea {
+  margin-bottom: 2px;
+}
+
+.el-image-viewer__btn {
+  z-index: 9999 !important;
+  color: #fff;
+}
+
+.el-msg-notice {
+  background-color: rgba(51, 51, 51, 0.8);
+}
+
+.el-notification {
+  display: -webkit-box;
+}
+
+.el-notification__closeBtn {
+  color: #fff;
+}
+
+.el-notification__closeBtn:hover {
+  color: #fff;
+}
+
+.el-table .hidden-columns {
+  z-index: 9;
+  visibility: inherit;
+}
+//全局表单样式
+.FromBox {
+  height: 100%;
+}
+
+.top {
+  margin-bottom: 10px;
+}
+
+.DottedLine {
+  margin: 10px 0 10px 0;
+  border-bottom: 1px dashed #dcdfe6;
+}
+
+.Btn-Left {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.Btn-Right {
+  display: flex;
+  // justify-content: flex-end;
+}
+
+.Btn-flex {
+  display: flex;
+}
+
+.Btn-Center {
+  display: flex;
+  justify-content: center;
+}
+
+.el-dialog__body {
+  padding: 10px 20px 20px 20px;
+}
+//全局  select 宽度
+.el-select {
+  width: 100%;
+}
+
+.el-date-editor.el-input {
+  width: 100%;
+}
+
+.el-form-item--small.el-form-item {
+  margin-bottom: 15px;
+}
+
+.el-rate {
+  display: inline-block;
+  vertical-align: text-top;
+}
+
+// table 文本单行显示 省略号
+.el-table .cell > div {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// .el-input--suffix .el-input__inner {
+//   padding: 0 0.9375rem;
+// }

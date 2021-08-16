@@ -1,0 +1,50 @@
+// base color
+$blue:#324157;
+$light-blue:rgb(92, 140, 255);
+$red:#ea3732;
+$pink: #e65d6e;
+$green: #30b08f;
+$tiffany: #4ab7bd;
+$yellow:#fec171;
+$panGreen: #30b08f;
+
+$fontColor: #333;       // 主要颜色
+$labelColor: #666;      // 表单标签颜色
+$borderColor: #ddd;     // 边框颜色
+$selectColor: #0042a2;  //  选中时得颜色
+$deleteColor: #e61739;  // 删除文字颜色
+$headBgColor: #eaedf1; // 表头背景色/弹窗title背景色
+$footerBgColor: #eaedf1; // 表格斑马线背景色/弹窗底部操作区域背景色
+$tableSelectBgColor: #6e90d8;
+$inputBorderColor: #e1e7eb; //   默认输入框色/tab标签框线/
+
+// sidebar
+$menuText: $fontColor;
+$topMenuText: #fff;
+$menuActiveText: #fff;
+$subMenuActiveText:$fontColor;
+
+$menuBg:#fff;
+$menuHover:$light-blue;
+$tagColor: $light-blue;
+
+$subMenuBg:#fff;
+$subMenuHover:$light-blue;
+
+$sideBarWidth: 210px;
+
+// 支持导出成js
+// the :export directive is the magic sauce for webpack
+// https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass
+/* stylelint-disable */
+:export {
+    menutext: $menuText;
+    menuactivetext: $menuActiveText;
+    submenuactivetext: $subMenuActiveText;
+    topmenutext: $topMenuText;
+    menubg: $menuBg;
+    menuhover: $menuHover;
+    submenubg: $subMenuBg;
+    submenuhover: $subMenuHover;
+    sidebarwidth: $sideBarWidth;
+}

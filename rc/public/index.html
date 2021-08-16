@@ -1,0 +1,30 @@
+<!--
+ * @name: 文件
+ * @Author: Gin
+ * @Date: 2020-12-23 09:26:08
+ * @LastEditors: Gin
+ * @LastEditTime: 2021-04-13 15:19:46
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- <link rel="icon" href="<%= BASE_URL %>favicon.ico"> -->
+    <link rel="icon" href="./ico-logo.png">
+    <title><%= webpackConfig.name %></title>
+  </head>
+  <script>
+    window._CONFIG = {};
+     //图片预览
+     window._CONFIG['nginxUrl'] = ' http://47.116.52.164:10002/sitefiles/cyyglxtmispro/enterprise/';//测试
+      // window._CONFIG['nginxUrl'] = 'http://10.10.3.84:5980/enterprise/'; 
+      window._CONFIG['baseUrl'] = 'http://10.10.2.28:7982/';//生产
+  </script>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>

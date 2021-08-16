@@ -1,0 +1,134 @@
+<template>
+  <div>
+    <el-form
+      ref="addForm"
+      v-hide-placeholder
+      :model="formData"
+      label-width="80px"
+      :disabled="onlyRead"
+      :rules="onlyRead ? {} : rules"
+    >
+      <el-form-item label="身份证" prop="communityName">
+        <el-input
+          v-model="formData.communityName"
+          v-clear-emoji
+          :maxlength="200"
+          placeholder="请输入身份证"
+        />
+      </el-form-item>
+      <el-form-item label="楼栋号" prop="buildingNo">
+        <el-input
+          v-model="formData.buildingNo"
+          v-clear-emoji
+          :maxlength="20"
+          placeholder="请输入楼栋号"
+        />
+      </el-form-item>
+      <el-form-item label="两位小数" prop="communityId">
+        <el-input
+          v-model="formData.communityId"
+          v-only-number="{ min: 0, max: 1000, precision: 2 }"
+          placeholder="请输入两位小数"
+        />
+      </el-form-item>
+      <el-form-item label="手机号" prop="phone">
+        <el-input
+          v-model="formData.phone"
+          v-clear-emoji
+          :maxlength="20"
+          placeholder="请输入手机号"
+        />
+      </el-form-item>
+      <el-form-item label="下拉框示例" prop="select">
+        <el-select
+          v-model="formData.select"
+          placeholder="请选择楼栋号"
+          prop="select"
+        >
+          <el-option
+            v-for="item in options"
+            :key="item.id"
+            :label="item.buildingNo"
+            :value="item.id"
+          />
+        </el-select>
+      </el-form-item>
+    </el-form>
+  </div>
+</template>
+
+<script>
+import { getNoAndIdByBuilding } from '@/api/test'
+export default {
+  name: 'HouseAddMoudle',
+  props: {
+    formData: {
+      type: Object,
+      default: () => ({})
+    },
+    onlyRead: {
+      type: Boolean,
+      default: false
+    }
+  },
+  data() {
+    return {
+
+      options: [],
+      rules: {
+        communityName: [
+          { required: true, message: '请输入身份证', trigger: 'blur' },
+          {
+            pattern: /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/,
+            message: '请输入正确身份证'
+          }
+        ],
+        buildingNo: [
+          { required: true, message: '请输入楼栋号', trigger: 'blur' },
+          { pattern: /^\+?[1-9]\d*$/, message: '请输入大于0的正整数' }
+        ],
+        communityId: [
+          { required: true, message: '请输入两位小数', trigger: 'blur' },
+          { pattern: /^-?\d+(\.\d{0,2})?$/, message: '请输入两位小数' }
+        ],
+        phone: [
+          { required: true, message: '请输入手机号', trigger: 'blur' },
+          {
+            pattern: /^1(3[0-9]|4[01456879]|5[0-35-9]|6[2567]|7[0-8]|8[0-9]|9[0-35-9])\d{8}$/,
+            message: '请输入正确手机号'
+          }
+        ],
+        select: [{ required: true, message: '请选择下拉框', trigger: 'change' }]
+      }
+    }
+  },
+  mounted() {
+    this.getBuildHandel()
+  },
+  methods: {
+    /**
+     * 异步获取下拉选项值
+     * @param { Void }
+     * @returns {Void}
+     */
+    getBuildHandel(id) {
+      getNoAndIdByBuilding(id).then(res => {
+        this.options = res.data.records
+      })
+    },
+    // 判断表单是否通过校验
+    rulesHandel() {
+      let isOk = false
+      console.log(this.formData)
+      this.$refs.addForm.validate(valid => {
+        isOk = valid
+      })
+      return isOk
+    }
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+// do something...
+</style>

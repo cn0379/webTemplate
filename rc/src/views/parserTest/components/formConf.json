@@ -1,0 +1,314 @@
+{
+  "fields": [{
+    "__config__": {
+      "label": "多选框组",
+      "tag": "el-checkbox-group",
+      "tagIcon": "checkbox",
+      "defaultValue": [""],
+      "span": 24,
+      "showLabel": true,
+      "labelWidth": null,
+      "layout": "colFormItem",
+      "optionType": "default",
+      "required": true,
+      "regList": [],
+      "changeTag": true,
+      "border": false,
+      "document": "https://element.eleme.cn/#/zh-CN/component/checkbox",
+      "formId": 101,
+      "renderKey": 1625557847235
+    },
+    "__slot__": {
+      "options": [{
+        "label": "选项一",
+        "value": 1
+      }, {
+        "label": "选项二",
+        "value": 2
+      }]
+    },
+    "style": {},
+    "size": "medium",
+    "min": 1,
+    "max": 2,
+    "disabled": false,
+    "__vModel__": "field101"
+  }, {
+    "__config__": {
+      "label": "评分",
+      "tag": "el-rate",
+      "tagIcon": "rate",
+      "defaultValue": 0,
+      "span": 24,
+      "showLabel": true,
+      "labelWidth": null,
+      "layout": "colFormItem",
+      "required": true,
+      "regList": [],
+      "changeTag": true,
+      "document": "https://element.eleme.cn/#/zh-CN/component/rate",
+      "formId": 102,
+      "renderKey": 1625558398605
+    },
+    "style": {},
+    "max": 5,
+    "allow-half": false,
+    "show-text": false,
+    "show-score": false,
+    "disabled": false,
+    "__vModel__": "field102"
+  }, {
+    "__config__": {
+      "label": "时间选择",
+      "tag": "el-time-picker",
+      "tagIcon": "time",
+      "defaultValue": null,
+      "span": 24,
+      "showLabel": true,
+      "layout": "colFormItem",
+      "labelWidth": null,
+      "required": true,
+      "regList": [],
+      "changeTag": true,
+      "document": "https://element.eleme.cn/#/zh-CN/component/time-picker",
+      "formId": 103,
+      "renderKey": 1625558399124
+    },
+    "placeholder": "请选择时间选择",
+    "style": {
+      "width": "100%"
+    },
+    "disabled": false,
+    "clearable": true,
+    "picker-options": {
+      "selectableRange": "00:00:00-23:59:59"
+    },
+    "format": "HH:mm:ss",
+    "value-format": "HH:mm:ss",
+    "__vModel__": "field103"
+  }, {
+    "__config__": {
+      "label": "滑块",
+      "tag": "el-slider",
+      "tagIcon": "slider",
+      "defaultValue": 0,
+      "span": 24,
+      "showLabel": true,
+      "layout": "colFormItem",
+      "labelWidth": null,
+      "required": true,
+      "regList": [],
+      "changeTag": true,
+      "document": "https://element.eleme.cn/#/zh-CN/component/slider",
+      "formId": 104,
+      "renderKey": 1625558399503
+    },
+    "disabled": false,
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "show-stops": false,
+    "range": false,
+    "__vModel__": "field104"
+  }, {
+    "__config__": {
+      "label": "单选框组",
+      "labelWidth": null,
+      "showLabel": true,
+      "tag": "el-radio-group",
+      "tagIcon": "radio",
+      "changeTag": true,
+      "layout": "colFormItem",
+      "span": 24,
+      "optionType": "default",
+      "regList": [],
+      "required": true,
+      "border": false,
+      "document": "https://element.eleme.cn/#/zh-CN/component/radio",
+      "formId": 105,
+      "renderKey": 1625558399908
+    },
+    "__slot__": {
+      "options": [{
+        "label": "选项一",
+        "value": 1
+      }, {
+        "label": "选项二",
+        "value": 2
+      }]
+    },
+    "style": {},
+    "size": "medium",
+    "disabled": false,
+    "__vModel__": "field105"
+  }, {
+    "__config__": {
+      "label": "单行文本",
+      "labelWidth": null,
+      "showLabel": true,
+      "changeTag": true,
+      "tag": "el-input",
+      "tagIcon": "input",
+      "required": true,
+      "layout": "colFormItem",
+      "span": 24,
+      "document": "https://element.eleme.cn/#/zh-CN/component/input",
+      "regList": [],
+      "formId": 106,
+      "renderKey": 1625559074362
+    },
+    "__slot__": {
+      "prepend": "",
+      "append": ""
+    },
+    "placeholder": "请输入单行文本",
+    "style": {
+      "width": "100%"
+    },
+    "clearable": true,
+    "prefix-icon": "",
+    "suffix-icon": "",
+    "maxlength": null,
+    "show-word-limit": false,
+    "readonly": false,
+    "disabled": false,
+    "__vModel__": "field106"
+  }, {
+    "__config__": {
+      "label": "日期范围",
+      "tag": "el-date-picker",
+      "tagIcon": "date-range",
+      "defaultValue": ["2021-07-14 00:00:00", "2021-08-17 00:00:00"],
+      "span": 24,
+      "showLabel": true,
+      "labelWidth": null,
+      "required": true,
+      "layout": "colFormItem",
+      "regList": [],
+      "changeTag": true,
+      "document": "https://element.eleme.cn/#/zh-CN/component/date-picker",
+      "formId": 107,
+      "renderKey": 1625559631422
+    },
+    "style": {
+      "width": "100%"
+    },
+    "type": "datetimerange",
+    "range-separator": "至",
+    "start-placeholder": "开始日期",
+    "end-placeholder": "结束日期",
+    "disabled": false,
+    "clearable": true,
+    "format": "yyyy-MM-dd HH:mm:ss",
+    "value-format": "yyyy-MM-dd HH:mm:ss",
+    "readonly": false,
+    "__vModel__": "field107"
+  }, {
+    "__config__": {
+      "label": "单行文本",
+      "labelWidth": null,
+      "showLabel": true,
+      "changeTag": true,
+      "tag": "el-input",
+      "tagIcon": "input",
+      "required": true,
+      "layout": "colFormItem",
+      "span": 12,
+      "document": "https://element.eleme.cn/#/zh-CN/component/input",
+      "regList": [],
+      "formId": 108,
+      "renderKey": 1626069964739
+    },
+    "__slot__": {
+      "prepend": "",
+      "append": ""
+    },
+    "placeholder": "请输入单行文本",
+    "style": {
+      "width": "100%"
+    },
+    "clearable": true,
+    "prefix-icon": "",
+    "suffix-icon": "",
+    "maxlength": null,
+    "show-word-limit": false,
+    "readonly": false,
+    "disabled": false,
+    "__vModel__": "field108"
+  }, {
+    "__config__": {
+      "label": "单行文本",
+      "labelWidth": null,
+      "showLabel": true,
+      "changeTag": true,
+      "tag": "el-input",
+      "tagIcon": "input",
+      "required": true,
+      "layout": "colFormItem",
+      "span": 12,
+      "document": "https://element.eleme.cn/#/zh-CN/component/input",
+      "regList": [],
+      "formId": 109,
+      "renderKey": 1626069971174
+    },
+    "__slot__": {
+      "prepend": "",
+      "append": ""
+    },
+    "placeholder": "请输入单行文本",
+    "style": {
+      "width": "100%"
+    },
+    "clearable": true,
+    "prefix-icon": "",
+    "suffix-icon": "",
+    "maxlength": null,
+    "show-word-limit": false,
+    "readonly": false,
+    "disabled": false,
+    "__vModel__": "field109"
+  }, {
+    "__config__": {
+      "label": "单行文本",
+      "labelWidth": null,
+      "showLabel": true,
+      "changeTag": true,
+      "tag": "el-input",
+      "tagIcon": "input",
+      "required": true,
+      "layout": "colFormItem",
+      "span": 12,
+      "document": "https://element.eleme.cn/#/zh-CN/component/input",
+      "regList": [],
+      "formId": 110,
+      "renderKey": 1626069975221
+    },
+    "__slot__": {
+      "prepend": "",
+      "append": ""
+    },
+    "placeholder": "请输入单行文本",
+    "style": {
+      "width": "100%"
+    },
+    "clearable": true,
+    "prefix-icon": "",
+    "suffix-icon": "",
+    "maxlength": null,
+    "show-word-limit": false,
+    "readonly": false,
+    "disabled": false,
+    "__vModel__": "field110"
+  }],
+  "formRef": "elForm",
+  "formModel": "formData",
+  "size": "medium",
+  "labelPosition": "right",
+  "labelWidth": 100,
+  "formRules": "rules",
+  "gutter": 15,
+  "disabled": false,
+  "span": 12,
+  "formBtns": false,
+  "unFocusedComponentBorder": false
+}
